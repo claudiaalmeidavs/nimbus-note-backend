@@ -1,12 +1,12 @@
-const Activity = require("../models/activity.model");
+const Project = require("../models/project.model");
 
-const getAllActivities = (req, res) => {
-  Activity.getAll()
+const getAllProjects = (req, res) => {
+  Project.getAll()
     .then((result) => {
       if (result.length > 0) {
         res.status(200).json(result);
       } else {
-        res.status(404).send("No activities found.");
+        res.status(404).send("No projects found.");
       }
     })
     .catch((err) => {
@@ -15,31 +15,31 @@ const getAllActivities = (req, res) => {
     });
 };
 
-const updateActivity = (req, res) => {
+const updateProject = (req, res) => {
   const { id } = req.params;
-  const { activity_status } = req.body;
-  Activity.updateStatus(id, activity_status)
+  const { status } = req.body;
+  Project.updateStatus(id, status)
   .then((result) => {
       if (result) {
         res.status(200).json(result);
       } else {
-        res.status(404).send("Activity not found.");
+        res.status(404).send("Project not found.");
       }
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).send("Error updating activity");
+      res.status(500).send("Error updating project");
     });
 };
 
-const getActivityById = (req, res) => {
+const getProjectById = (req, res) => {
   const { id } = req.params;
-  Activity.getById(id)
+  Project.getById(id)
     .then((result) => {
       if (result.length > 0) {
         res.status(200).json(result);
       } else {
-        res.status(404).send("No activities found.");
+        res.status(404).send("No projects found.");
       }
     })
     .catch((err) => {
@@ -48,13 +48,13 @@ const getActivityById = (req, res) => {
     });
 }
 
-const postNewActivity = (req, res) => {
-  Activity.createActivity(req.body)
+const postNewProject = (req, res) => {
+  Project.createProject(req.body)
   .then((result) => {
       if (result) {
         res.status(201).json(result);
       } else {
-        res.status(404).send("Activity not found.");
+        res.status(404).send("Project not found.");
       }
     })
     .catch((err) => {
@@ -63,26 +63,26 @@ const postNewActivity = (req, res) => {
     });
 };
 
-const deleteActivity = (req, res) => {
+const deleteProject = (req, res) => {
   const { id } = req.params;
-  Activity.del(id)
+  Project.del(id)
   .then((result) => {
     if (result) {
       res.status(200).json(result);
     } else {
-      res.status(404).send("Activity not found.");
+      res.status(404).send("Project not found.");
     }
   })
   .catch((err) => {
     console.error(err);
-    res.status(500).send("Error deleting Activity");
+    res.status(500).send("Error deleting project");
   });
 }
 
 module.exports = {
-  getAllActivities,
-  updateActivity,
-  getActivityById,
-  postNewActivity,
-  deleteActivity
+  getAllProjects,
+  updateProject,
+  getProjectById,
+  postNewProject,
+  deleteProject
 };
