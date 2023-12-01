@@ -1,4 +1,4 @@
-const database = require("../../database");
+const database = require ("../../database.js");
 
 const getAll = () => {
   return database.query("SELECT * FROM projects").then(([results]) => results);
@@ -11,6 +11,14 @@ const updateStatus = (id, status) => {
         [status, id]
     )
     .then(([results]) => (results));
+}
+
+const update = (id, updatedProject) => {
+    return database
+    .query(
+      "UPDATE projects SET ? WHERE id = ?", [updatedProject, id]
+    )
+    .then(([results]) => (results))
 }
 
 const getById = (id) => {
@@ -36,6 +44,7 @@ const del = (id) => {
 module.exports = {
     getAll,
     updateStatus,
+    update,
     getById, 
     createProject, 
     del

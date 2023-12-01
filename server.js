@@ -2,6 +2,7 @@ const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
 const port = process.env.APP_PORT;
+const projectRouter = require("./src/routes/index.routes");
 
 const server = express();
 
@@ -24,3 +25,5 @@ server.listen(port, (err) => {
         console.log("Server is listening on port ", port)
     }
 })
+
+projectRouter(server);

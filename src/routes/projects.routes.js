@@ -3,13 +3,13 @@ const projectController = require("../controllers/project.controller");
 const projectRouter = express.Router();
 
 // Route to get all projects
-projectRouter.get("/", activityController.getAllProjects);
+projectRouter.get("/", projectController.getAllProjects);
 
 // Route to change status
-projectRouter.put("/:id", activityController.updateStatus)
+projectRouter.put("status/:id", projectController.updateStatus)
 
-//! Route to edit project details
-
+// Route to edit project details
+projectRouter.put("/:id", projectController.editProject)
 
 // Route to get by id
 projectRouter.get("/:id", projectController.getProjectById)
