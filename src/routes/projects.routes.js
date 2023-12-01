@@ -5,9 +5,6 @@ const projectRouter = express.Router();
 // Route to get all projects
 projectRouter.get("/", projectController.getAllProjects);
 
-// Route to change status
-projectRouter.put("status/:id", projectController.updateStatus)
-
 // Route to edit project details
 projectRouter.put("/:id", projectController.editProject)
 

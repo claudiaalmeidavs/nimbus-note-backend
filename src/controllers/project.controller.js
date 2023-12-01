@@ -15,24 +15,7 @@ const getAllProjects = (req, res) => {
     });
 };
 
-const updateStatus = (req, res) => {
-  const { id } = req.params;
-  const { status } = req.body;
-  Project.updateStatus(id, status)
-  .then((result) => {
-      if (result) {
-        res.status(200).json(result);
-      } else {
-        res.status(404).send("Project not found.");
-      }
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).send("Error updating project");
-    });
-};
-
-const editProject = (res, req) => {
+const editProject = (req, res) => {
   const { id } = req.params;
   const updatedProject = req.body;
   Project.update(id, updatedProject)
@@ -94,7 +77,6 @@ const deleteProject = (req, res) => {
 
 module.exports = {
   getAllProjects,
-  updateStatus,
   editProject,
   getProjectById,
   postNewProject,
