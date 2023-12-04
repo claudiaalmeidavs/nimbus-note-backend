@@ -24,8 +24,4 @@ VALUES
   ("Elena Garcia", "CodeCrafters", "Outsourcing Partnership Research", "Market Research", "In progress", "High", "2023-11-28", "Research potential outsourcing partners for cost-effective collaboration"),
   ("Ryan Walker", "TechSolutions", "Data Entry Quality Assurance", "Data Entry", "Completed", "Medium", "2023-11-15", "Perform quality assurance checks on existing data entry work"),
   ("Olivia Davis", "InnoGlobe", "Other Project A", "Other", "In progress", "Medium", "2023-12-22", "Description for an unspecified project in the 'Other' category"),
-  ("Daniel Chen", "TechInnovate", "Lead Nurturing Campaign", "Lead Generation", "Not started", "High", "2023-12-25", "Implement a lead nurturing campaign for relationship building"),
-  ("Emma White", "DataDriven", "Data Labeling for NLP", "Data Labeling", "Not started", "High", "2023-11-22", "Label data for natural language processing (NLP) model training"),
-  ("Andrew Taylor", "CodeMasters", "Other Project B", "Other", "Completed", "Medium", "2023-11-30", "Description for another unspecified project in the 'Other' category"),
-  ("Grace Turner", "InnoDesign", "Product Launch Outreach", "Outreach", "In progress", "Medium", "2023-12-30", "Plan and execute outreach strategies for a new product launch"),
-  ("Brian Miller", "TechSavvy", "Data Entry Automation", "Data Entry", "In progress", "High", "2023-11-18", "Implement automation processes for efficient data entry");
+  ("Daniel Chen", "TechInnovate", "Lead Nurturing Campaign", "Lead Generation", "Not started", "High", "2023-12-25", "Implement a lead nurturing campaign for relationship building");
