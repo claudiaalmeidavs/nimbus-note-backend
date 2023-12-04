@@ -1,7 +1,7 @@
 const database = require ("../../database.js");
 
 const getAll = () => {
-  return database.query("SELECT * FROM projects").then(([results]) => results);
+  return database.query("SELECT * FROM projects ORDER BY deadline ASC").then(([results]) => results);
 };
 
 const update = (id, updatedProject) => {
