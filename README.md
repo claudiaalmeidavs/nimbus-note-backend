@@ -7,10 +7,15 @@ This is the README file for the Server side of Nimbus Note, which allows the cre
 
 Follow these steps to run the Nimbus Note server:
     1. Clone the repository into your local machine by running git clone https://github.com/claudiaalmeidavs/nimbus-note-backend.git
-    2. Navigate to the project directory by entering the command "cd your-project-folder"
+
+    2. Navigate to the project directory by entering the command "cd your-project-folder".
+
     3. Run "npm install" in the project directory to install all the necessary packages and dependencies.
+
     4. Create a .env file based on the provided .env.sample file. Complete the necessary environment variables in the .env file, such as database credentials and app port.
+
     5. Run "npm run migrate" to create or reset the database required for Nimbus Note to run dynamically.
+    
     6. Run the command "npm run dev" to start the development server
 
 ## Technologies used
